@@ -25,7 +25,7 @@
                       <form action="{{route('sertifikat.post')}}" method="POST">@csrf
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" name="nama" id="nama" class="form-control @error('nama') is-invalid @enderror">
+                            <input type="text" name="nama" id="nama" value="{{old('nama')}}" class="form-control @error('nama') is-invalid @enderror">
                             @error('nama')
                                 <div class="invalid-feedback">
                                     {{$message}}
